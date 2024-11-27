@@ -48,6 +48,7 @@ Objective: Create a post detail page where the user can view the full details of
 1. Generate a new component using Angular's CLI with the path `/components/<component-name>/`
 2. Update the `app-routing.module.ts` file to include a new route for the post detail page.
 3. Implement the `getPostById()` method in the PostService to fetch a single post by its ID.
+4. Implement the `getPostComments()` method in the PostService to fetch comments for a specific post. https://jsonplaceholder.typicode.com/posts/{postId}/comments
 
 - `src/app/post.service.ts`
 - `src/app/post-detail/post-detail.component.ts`
