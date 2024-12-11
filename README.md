@@ -30,12 +30,14 @@ Objective: Fetch posts from the endpoint https://jsonplaceholder.typicode.com/po
 
 1. Change the routing element so that the index page is rerouted to the `/posts` route.
 2. Open post.service.ts and implement the getPosts() method to fetch posts from the API.
-3. In post-list.component.ts, call the getPosts() method from PostService and store the data.
-4. Update post-list.component.html to display the fetched posts using Angular's structural directives (*ngFor).
+3. In post-list.component.ts, call the getPosts() method from PostService to display a list of posts in the list page.
+4. Update post-list.component.html to display the fetched posts using Angular's structural directives (*ngFor / @for).
+   - If possible, display the posts directly in the post-list component without saving them into a variable in the script.
 
 
 Files to Work On:
 
+- `src/app/app-routing.module.ts`
 - `src/app/services/post.service.ts`
 - `src/app/components/post-list/post-list.component.ts`
 - `src/app/components/post-list/post-list.component.html`
@@ -47,15 +49,38 @@ Objective: Create a post detail page where the user can view the full details of
 ### Steps:
 1. Generate a new component using Angular's CLI with the path `/components/<component-name>/`
 2. Update the `app-routing.module.ts` file to include a new route for the post detail page.
-3. Implement the `getPostById()` method in the PostService to fetch a single post by its ID.
-4. Implement the `getPostComments()` method in the PostService to fetch comments for a specific post. https://jsonplaceholder.typicode.com/posts/{postId}/comments
+3. Route to the post detail page when a post is clicked on the post list page.
+4. Implement the `getPostById()` method in the PostService to fetch a single post by its ID using the ID from the query params.
+5. Implement the `getPostComments()` method in the PostService to fetch comments for a specific post. https://jsonplaceholder.typicode.com/posts/${postId}/comments
+6. Display the post details and the comments on the post detail page.
+7. Display an index number for each comment in the list corresponding to the comment's position in the list.
 
 - `src/app/post.service.ts`
 - `src/app/post-detail/post-detail.component.ts`
 - `src/app/post-detail/post-detail.component.html`
 - `src/app/app-routing.module.ts`
 
-### Stage 3: Refresh Posts
+### Stage 3: Post detail page visuals
 
-Objective: Implement an interval-based refresh on the posts list page and/or a manual refresh button.
-# postman
+Objective: Conditionally style the post detail page.
+
+### Steps:
+1. Style the post detail page comments so that every second commend has a blue background.
+2. Give only the first comment a cool orange border.
+
+### Stage 4: Refresh Posts (OPTIONAL)
+
+Objective: Implement ways to refresh the posts list page.
+
+### Steps:
+1. Implement a manual refresh button on the posts list page where the posts are refetched when the button is clicked.
+2. Implement an interval-based refresh on the posts list page that automatically fetches new posts every 30 seconds.
+
+
+### Stage 5: Filtering on search (OPTIONAL)
+
+Objective: Implement a search feature that filters posts based on the search query.
+
+### Steps:
+1. Implement a search input field on the posts list page using Angular's reactive forms.
+2. Filter posts by their title based on the search query entered by the user.
