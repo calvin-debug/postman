@@ -85,5 +85,5 @@ Objective: Implement ways to refresh the posts list page.
 Objective: Implement a search feature that filters posts based on the search query.
 
 ### Steps:
-1. Implement a search input field on the posts list page using Angular's reactive forms.
+1. Implement a search input field on the posts list page using Angular's reactive forms or two-way data binding with Signal
 2. Filter posts by their title based on the search query entered by the user.
