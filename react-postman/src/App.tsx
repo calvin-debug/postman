@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import PostsList from './components/PostsList';
-import PostDetail from './components/PostDetail';
+// import PostDetail from './components/PostDetail';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/posts" element={<PostsList />} />
         
         {/* Create a post detail route, using a URL parameter ':id' */}
-        <Route path="/posts/:id" element={<PostDetail />} />
+        {/* <Route ... /> */}
       </Routes>
     </div>
   );

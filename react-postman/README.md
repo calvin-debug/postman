@@ -32,7 +32,7 @@ Objective: Fetch posts from the endpoint https://jsonplaceholder.typicode.com/po
 ### Steps:
 
 1. Currently, the index page (`/`) leads to an empty page. Update `src/App.tsx` to ensure the root path `/` redirects or directly renders the posts list (`/posts`) route.
-2. Open `src/components/PostsList.tsx` and implement the logic inside a `useEffect` hook to fetch posts from the API when the component mounts. Store the fetched posts in the component's state using the `useState` hook.
+2. Open `src/components/PostsList.tsx` and implement the logic inside a `useEffect` hook to fetch posts from the API endpoint `https://jsonplaceholder.typicode.com/posts` when the component mounts. Store the fetched posts in the component's state.
 3. Correctly type the posts state variable based on the data returned from the API.
 4. Update the JSX in `src/components/PostsList.tsx` to display the fetched posts in a list. Styling is not overly important at this stage, but give each post some padding, margin and a nice border
 
