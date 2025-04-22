@@ -1,1 +1,10 @@
-<p>posts-list works!</p>
+<button (click)="refreshPosts()">Refresh</button>
+
+<input [(ngModel)]="search" />
+
+@for (post of posts$ | async; track post.id; let i = $index) {
+<div (click)="navigateToPost(post.id)">
+    <h1>{{ i }} {{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+</div>
+}

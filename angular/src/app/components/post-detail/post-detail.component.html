@@ -1,0 +1,5 @@
+<!-- <p>{{ postsService.postsWithCommentsSubject | async | json }}</p>
+
+@for (comment of (postsService.postsWithCommentsSubject | async)?.comments; track comment.id; let i = $index; let even = $even; let odd = $odd) {
+  <p [style.background-color]="even ? 'lightgray' : undefined">{{ i + 1 }}. {{ getCommentTitle(comment) }}</p>
+} -->
